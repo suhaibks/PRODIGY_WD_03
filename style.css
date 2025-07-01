@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #e0f7fa, #80deea);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 90%;
+    max-width: 360px;
+  }
+  
+  h1 {
+    margin-bottom: 1rem;
+    color: #004d40;
+  }
+  
+  #status {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #00695c;
+  }
+  
+  .scoreboard {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  .tile {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 12px;
+    height: 90px;
+    font-size: 2.2rem;
+    color: #006064;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .tile:hover {
+    transform: scale(1.05);
+  }
+  
+  #resetBtn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #00bcd4;
+    border: none;
+    border-radius: 24px;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+  }
+  
+  #resetBtn:hover {
+    background-color: #0097a7;
+  }
+
+  #resetScoresBtn {
+    margin-top: 10px;
+    padding: 8px 18px;
+    font-size: 0.95rem;
+    background-color: #ff6f61;
+    border: none;
+    border-radius: 24px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  #resetScoresBtn:hover {
+    background-color: #d84315;
+  }
+  
+  
+  .winning-tile {
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 10px 4px #00e676;
+    }
+    to {
+      box-shadow: 0 0 20px 8px #69f0ae;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .tile {
+      height: 70px;
+      font-size: 1.6rem;
+    }
+  }
+  
